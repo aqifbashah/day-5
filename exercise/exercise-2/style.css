@@ -62,6 +62,10 @@ header > nav {
   gap: 30px;
 }
 
+.nav-mobile {
+  display: none;
+}
+
 /* section-1 */
 
 .section-1 {
@@ -131,7 +135,7 @@ header > nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 915px;
+  width: 80%;
   height: 86px;
   flex-shrink: 0;
   border-radius: 8px;
@@ -384,4 +388,93 @@ footer > div > nav {
   font-weight: 300;
   line-height: 100%; /* 16px */
   text-transform: capitalize;
+}
+
+/* mobile */
+
+@media (max-width: 600px) {
+  * {
+    text-align: center;
+  }
+
+  header {
+    padding: 30px 20px;
+  }
+
+  header > nav {
+    display: none;
+  }
+
+  .section-1 {
+    flex-direction: column;
+  }
+
+  .nav-mobile {
+    display: block;
+  }
+
+  .section-1 > article {
+    align-items: center;
+  }
+
+  .section-2 > div > img {
+    width: 80px;
+    height: auto;
+  }
+
+  .section-3 {
+    flex-direction: column-reverse;
+  }
+
+  .section-3 > article {
+    align-items: center;
+  }
+
+  .section-3 > article > button {
+    transform: rotate(90deg);
+  }
+
+  .section-4 {
+    flex-direction: column;
+  }
+
+  .section-4 > article {
+    align-items: center;
+  }
+
+  .section-4 > article > button {
+    transform: rotate(90deg);
+  }
+
+  .section-5 > div {
+    flex-direction: column;
+  }
+
+  .section-6 > div {
+    width: 500px;
+    height: auto;
+  }
+
+  .section-6 > div > figure {
+    display: none;
+  }
+
+  .section-6 > div > article {
+    align-items: center;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  footer > * {
+    align-items: center;
+  }
+
+  footer > div > nav {
+    align-items: center;
+  }
 }
